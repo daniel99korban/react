@@ -29,7 +29,7 @@ const app = () => {
             <p>12 e 3</p>
             <h1 className="color-green">Soma: {somar(12, 3)}</h1>
             <h1 className="color-yellow">Subtração: {subtrair(12, 3)}</h1>
-            <h1 className="color-red">Multiplicar: {multiplicar(12, 3)}</h1>
+            <h1 className="color-red">Multiplicação: {multiplicar(12, 3)}</h1>
             <h1 className="color-orange">Divisão: {dividir(12, 3)}</h1>
         </div>
     )
