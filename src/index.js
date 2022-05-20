@@ -1,17 +1,44 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react"
+import ReactDOM from "react-dom"
+import "./style.css"
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+function somar(x, y){
+    return x + y;
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function subtrair(x, y){
+    return x - y;
+}
+
+function multiplicar(x, y){
+    return x * y;
+}
+function dividir(x, y){
+    return x / y;
+}
+
+const primeiroJsx = () => {
+    return "Calculadora!";
+}
+
+const app = () => {
+
+    return (
+        <div className="app">
+            <h1>{primeiroJsx()}</h1>
+            <p>12 e 3</p>
+            <h1 className="color-green">Soma: {somar(12, 3)}</h1>
+            <h1 className="color-yellow">Subtração: {subtrair(12, 3)}</h1>
+            <h1 className="color-red">Multiplicar: {multiplicar(12, 3)}</h1>
+            <h1 className="color-orange">Divisão: {dividir(12, 3)}</h1>
+        </div>
+    )
+
+}
+
+const rootElement = document.getElementById("root")
+// desenho app na div root 
+ReactDOM.render(app(), rootElement);
+// exemplo de JSX
+//const element  = <h1>Hello, world</h1>
+//o browser não suporta JSX sem um transpilador o reactscript ja configura isso de forma automatica utilizando o babel. 

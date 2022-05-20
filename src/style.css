@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 22px;
+    color: black;
+}
+
+.color-green{
+    color: green;
+}
+
+.color-yellow{
+    color: yellow;
+}
+.color-red{
+    color: red;
+}
+.color-orange{
+    color: orange;
+}
