@@ -21,3 +21,19 @@ body{
 .color-orange{
     color: orange;
 }
+
+.botao-entrar{
+    border-radius: 5px;
+    padding: 5px;
+    border-style: none;
+    color: white;
+    background-color: rgb(211, 43, 226);
+}
+
+.botao-entrar-outline{
+    border-radius: 5px;
+    border: 2px solid rgb(211, 43, 226);
+    padding: 5px;
+    background-color: white;
+    color: rgb(211, 43, 226);
+}

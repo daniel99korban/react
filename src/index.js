@@ -1,44 +1,36 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import "./style.css"
+import Button from "./componentes/Button"
+import ComponenteA from "./componentes/ComponenteA"
+import ComponenteB from "./componentes/ComponenteB"
 
-function somar(x, y){
-    return x + y;
+function feedbackClique(){
+    alert('Botão foi pressionado');
 }
 
-function subtrair(x, y){
-    return x - y;
+function feedbackComponenteA(){
+    alert('ComponenteA foi pressionado');
 }
 
-function multiplicar(x, y){
-    return x * y;
-}
-function dividir(x, y){
-    return x / y;
+function feedbackComponenteB(){
+    alert('ComponenteB foi pressionado');
 }
 
-const primeiroJsx = () => {
-    return "Calculadora!";
-}
-
-const app = () => {
-
+function app(){
     return (
         <div className="app">
-            <h1>{primeiroJsx()}</h1>
-            <p>12 e 3</p>
-            <h1 className="color-green">Soma: {somar(12, 3)}</h1>
-            <h1 className="color-yellow">Subtração: {subtrair(12, 3)}</h1>
-            <h1 className="color-red">Multiplicação: {multiplicar(12, 3)}</h1>
-            <h1 className="color-orange">Divisão: {dividir(12, 3)}</h1>
+            <h1>Olá, Mundo!</h1>
+            {/* por padrão de nomeclatura, componentes iniciam com letra Maiuscula*/}
+            <Button onClick={()=>feedbackClique()} name="Clique aqui" />
+            <ComponenteA onClick ={()=> feedbackComponenteA()} name="ComponenteA">
+                <ComponenteB onClick ={()=> feedbackComponenteB()} name="ComponenteB">
+                    <Button onClick={()=>feedbackClique()} name="botao normal" />
+                </ComponenteB>
+            </ComponenteA>
         </div>
     )
-
 }
 
 const rootElement = document.getElementById("root")
-// desenho app na div root 
 ReactDOM.render(app(), rootElement);
-// exemplo de JSX
-//const element  = <h1>Hello, world</h1>
-//o browser não suporta JSX sem um transpilador o reactscript ja configura isso de forma automatica utilizando o babel. 
